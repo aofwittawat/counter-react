@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 
 export default class Counter extends Component {
-
-
+  
+  componentDidUpdate(){
+    console.log('Update');
+  }
   render() {
+    console.log('Counter-Render');
     // console.log(this.props.counter);
     const { value } = this.props.counter;
     let classes = value === 0 ? "badge badge-warning" : "badge badge-primary";
